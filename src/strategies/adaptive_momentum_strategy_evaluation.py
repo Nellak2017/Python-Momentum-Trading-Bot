@@ -4,21 +4,30 @@ Date: 19 Apr 2022
 Author: Connor Keenum
 
 Description:
-    "Momentum investing" means investing in the stocks that have increased in price the most.
-    This project will use a similar strat as in conservative_momentum, but it will learn the right sell value and update
-    it's model of the stock iteratively.
-    For this project, we're going to analyze a given stock and output the profitability of the strategy.
+    Take in 2 Stock data points and determine whether it is a buy, sell, or hold based on Strategy.
+
+Strategy:
+# This strategy will estimate r,v, and win/loss%
+# HOLDing = holding stock, HOLD = hold your current position
+    1. Sell if value_2 is +1.r% or -1.v% of buy_point and you are HOLDing the stock, otherwise use Ema Signal below to determine if BUY
+    2. If Ema12 is becoming less than Ema24, SELL if you are HOLDing the stock, HOLD if you don't have the stock
+    3. If Ema12 is becoming more than Ema24, BUY if you are not HOLDing the stock, HOLD if you have the stock
+    4. If you sold at a loss in the last transaction, only BUY iff Ema12 is becoming more than Ema24
+    5. If you are HOLDing and Ema12 stays positive over Ema24, SELL if value_2 is >= top_target or value_2 is <= bottom_target , HOLD otherwise
+    6. If you are HOLDing and Ema12 stays negative below Ema24, SELL
+    7. If you are not HOLDing and Ema12 stays positive over Ema24, BUY
+    8. If you are not HOLDing and Ema12 stays negative below Ema24, HOLD (Until BUY Signal)
 
 Input:
-    Start_Date : Date
-    End_Date : Date
-    Interval : Time (query every 1d , 1h, 10min, 1month, ...)
-    Data : (Map? DataFrame? List?)
+    r : Float (The Positive Sell threshold)
+    v : Float (The Negative Sell threshold)
+    Data_Point : Map {value_1, value_2, ema24_1, ema12_1,ema24_2, ema12_2, status ,rec_sold_at_loss, buy_point}
+        (status is current state of stock, holding or Not holding)
+        (buy_point is the value where you bought the stock at IF the status is holding too)
 
 Output:
-
+    Trade : Enum String in [BUY , SELL, HOLD]
 '''
-
 import numpy as np
 import pandas as pd
 import requests
