@@ -1,6 +1,6 @@
 import unittest
 
-from src.strategies.conservative_momentum_strategy_evaluation import evaluate_position
+from src.strategies.momentum_strategy_evaluation import evaluate_position
 
 
 class TestEvaluationFunction(unittest.TestCase):
