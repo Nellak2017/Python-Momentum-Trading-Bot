@@ -15,3 +15,6 @@ support folder -> all the support methods;
     strat_display -> display the effectiveness of different strategies in the terminal (lazy but effective)
 
 '''
+import numpy as np
+import pandas as pd
+import requests
