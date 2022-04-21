@@ -76,20 +76,20 @@ def evaluate_position(data_point: dict, r: float = 1.1, v: float = .95) -> str:
 
     # Main execution of the Function
 
-    BUY = "BUY"
-    SELL = "SELL"
-    HOLD = "HOLD"
+    BUY: str = "BUY"
+    SELL: str = "SELL"
+    HOLD: str = "HOLD"
 
-    holding = data_point["stock_holding"]
-    v2 = data_point["value_2"]
-    top = data_point["buy_point"] * r
-    bottom = data_point["buy_point"] * v
-    ema1 = data_point["ema12_1"] - data_point["ema24_1"]
-    ema2 = data_point["ema12_2"] - data_point["ema24_2"]
-    ema_increasing = True if ema1 < 0 < ema2 else False
-    ema_decreasing = True if ema1 > 0 > ema2 else False
-    ema_double_positive = True if ema1 > 0 and ema2 > 0 and not ema_decreasing and not ema_increasing else False
-    ema_double_negative = True if ema1 < 0 and ema2 < 0 and not ema_decreasing and not ema_increasing else False
+    holding: bool = data_point["stock_holding"]
+    v2: float = data_point["value_2"]
+    top: float = data_point["buy_point"] * r
+    bottom: float = data_point["buy_point"] * v
+    ema1: float = data_point["ema12_1"] - data_point["ema24_1"]
+    ema2: float = data_point["ema12_2"] - data_point["ema24_2"]
+    ema_increasing: bool = True if ema1 < 0 < ema2 else False
+    ema_decreasing: bool = True if ema1 > 0 > ema2 else False
+    ema_double_positive: bool = True if ema1 > 0 and ema2 > 0 and not ema_decreasing and not ema_increasing else False
+    ema_double_negative: bool = True if ema1 < 0 and ema2 < 0 and not ema_decreasing and not ema_increasing else False
 
     if not holding:
         if ema_double_positive:
