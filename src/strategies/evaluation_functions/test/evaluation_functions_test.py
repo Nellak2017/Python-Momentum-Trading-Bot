@@ -17,11 +17,6 @@ class TestEvaluationFunction(unittest.TestCase):
         v = .95
         buy_point = 1.09
 
-        # EMA ++ -->  "ema24_1": .5, "ema24_2": .75, "ema12_1": 1, "ema12_2": 1.2
-        # EMA +- -->  "ema24_1": .5, "ema24_2": 1.2, "ema12_1": 1, "ema12_2": .75
-        # EMA -+ -->  "ema24_1": 1, "ema24_2": .75, "ema12_1": .5, "ema12_2": 1.2
-        # EMA -- -->  "ema24_1": 1, "ema24_2": 1.2, "ema12_1": .5, "ema12_2": .75
-
         '''
         Type/Key Testing
         '''
