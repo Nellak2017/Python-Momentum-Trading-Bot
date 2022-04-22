@@ -18,13 +18,11 @@ Strategy:
     7. If you are not HOLDing and Ema12 stays negative below Ema24, HOLD (Until BUY Signal)
 
 Input:
-    r : Float (The Positive Sell threshold)
-    v : Float (The Negative Sell threshold)
-    Data_Point : Map {value_1, value_2, ema24_1, ema12_1,ema24_2, ema12_2, status ,rec_sold_at_loss, buy_point}
+    r = 1.1 : (optional) Float (The Positive Sell threshold)
+    v = .95 : (optional) Float (The Negative Sell threshold)
+    Data_Point : Map {value_1, value_2, ema24_1, ema12_1,ema24_2, ema12_2, status, buy_point}
         (status is current state of stock, holding or Not holding)
         (buy_point is the value where you bought the stock at IF the status is holding too)
-        (positive and negative sell thresholds are hard coded in with 2 magic numbers. This is a special case to
-            the adaptive algorithm)
 
 Output:
     Trade : Enum String in [BUY , SELL, HOLD]
