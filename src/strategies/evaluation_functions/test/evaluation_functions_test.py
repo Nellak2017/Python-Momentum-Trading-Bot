@@ -376,9 +376,6 @@ class TestEvaluationFunction(unittest.TestCase):
         result = evaluate_position(data)
         self.assertEqual(SELL, result)
 
-    def test_backtest(self):
-        pass
-
 
 if __name__ == '__main__':
     unittest.main()
