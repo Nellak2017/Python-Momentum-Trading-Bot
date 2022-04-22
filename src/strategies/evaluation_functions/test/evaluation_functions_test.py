@@ -1,6 +1,6 @@
 import unittest
 
-from src.strategies.momentum_strategy_evaluation import evaluate_position
+from src.strategies.evaluation_functions.momentum_strategy_evaluation import evaluate_position
 
 
 class TestEvaluationFunction(unittest.TestCase):
@@ -375,6 +375,9 @@ class TestEvaluationFunction(unittest.TestCase):
                 "stock_holding": True, "buy_point": 1.09}
         result = evaluate_position(data)
         self.assertEqual(SELL, result)
+
+    def test_backtest(self):
+        pass
 
 
 if __name__ == '__main__':
