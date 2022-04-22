@@ -26,7 +26,7 @@ class TestIndicators(unittest.TestCase):
         days = 2
         self.assertRaises(TypeError, ema, prev_ema=prev_ema, data_point=data_point, days=days)
 
-        # Type Test 2
+        # Type Test 3
         prev_ema = {"Key": 1, "1": .4}
         data_point = 1 + 1j
         days = 2
