@@ -1,7 +1,7 @@
 from datetime import datetime
 import random
 import src.back_testing.conservative_momentum_backtest as bt
-from src.data_processing.backtest_mock_data_generator import mock_data_generator
+from src.data_processing.backtest_mock_data_generator import mock_data_generator_uniform
 
 """
 Date: 22 Apr 2022
@@ -24,7 +24,7 @@ def uniform_dist_test(start, end, ticker, lowest, highest, query, repeat_test):
     print(f"Testing each Trading Strategy {repeat_test} times")
     print("-" * 30)
     for test in range(repeat_test):
-        mock_data = mock_data_generator(ticker, init_date, end_date, lowest, highest, query)
+        mock_data = mock_data_generator_uniform(ticker, init_date, end_date, lowest, highest, query)
         back_test = bt.conservative_momentum_backtest(mock_data, init_sma24, init_sma12)
 
         if test % (repeat_test//10) == 0 or test == repeat_test-1:
