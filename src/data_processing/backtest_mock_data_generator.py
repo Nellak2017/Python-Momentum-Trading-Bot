@@ -1,6 +1,5 @@
 from datetime import datetime
 import random
-import src.back_testing.conservative_momentum_backtest as bt
 """
 Date: 22 Apr 2022
 
