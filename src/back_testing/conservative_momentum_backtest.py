@@ -20,7 +20,7 @@ Input:
     init_SMA_24 : Float 
     init_SMA_12 : Float
 
-Output: (Will be displayed using strategy_display)
+Output: (Will be displayed using strategy_display or in a console simulation)
     store : [Map] (All the positions meta-data after everything is over. Last element has profitability)
 """
 
@@ -56,8 +56,8 @@ def conservative_momentum_backtest(data_set: list, init_SMA_24: float, init_SMA_
     sell_point: float = data_set[1]["value"]    # The value that you sold a stock at
     profitability_multiplier: float = 1.0       # Updated iteratively starting at 1
     holding: bool = initially_holding           # Changes based off evaluation function
-    EMA_24_1: float = init_SMA_24  # Has to start as init_SMA_24
-    EMA_12_1: float = init_SMA_12  # Has to start as init_SMA_12
+    EMA_24_1: float = init_SMA_24               # Has to start as init_SMA_24
+    EMA_12_1: float = init_SMA_12               # Has to start as init_SMA_12
 
     for data_index in range(len(data_set) - 3):
         # get value_1 and value_2 from data_set
@@ -85,8 +85,8 @@ def conservative_momentum_backtest(data_set: list, init_SMA_24: float, init_SMA_
         # evaluate this position, passing in dto and store data
         position_evaluation = mse.evaluate_position(data_point=eval_dto)
 
-        EMA_24_1 = EMA_24_2  # Updated with New Previous Ema values
-        EMA_12_1 = EMA_12_2  # Updated with New Previous Ema values
+        EMA_24_1 = EMA_24_2                     # Updated with New Previous Ema values
+        EMA_12_1 = EMA_12_2                     # Updated with New Previous Ema values
         EMA_24_2 = ema.ema(prev_ema=EMA_24_2, data_point=value_1, days=24)
         EMA_12_2 = ema.ema(prev_ema=EMA_12_2, data_point=value_1, days=12)
 
