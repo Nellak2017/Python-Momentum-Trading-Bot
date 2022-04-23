@@ -9,7 +9,7 @@ Date: 22 Apr 2022
 Author: Connor Keenum
 
 Description:
-    This file simply tests the conservative momentum strategy using various techniques.
+    This file simply simulates the conservative momentum strategy using various techniques.
 """
 
 
