@@ -1,3 +1,6 @@
+import src.strategies.indicators.ema as ema
+import src.strategies.evaluation_functions.momentum_strategy_evaluation as mse
+
 """
 Date: 19 Apr 2022
 
@@ -5,82 +8,39 @@ Author: Connor Keenum
 
 Description:
     "Momentum investing" means investing in the stocks that have increased in price the most.
-    For this back_testing, we're going to analyze a given stock and output the profitability of the strategy.
+    For this back_testing, we're going to analyze a given stock and output the profitability data of the strategy.
 
 Strategy:
     Sell at +10% or -5%, if -5% sell then wait until momentum indicator
     to buy. We will use momentum_strategy_evaluation to determine when to buy/sell/hold at any point.
 
 Input:
-    Start_Date : Date
-    End_Date : Date
-    Interval : Time (query every 1d , 1h, 10min, 1month, ...)
-    Data : (Map? DataFrame? List?)
+    Data : [dict]
     Initially_Holding = False : (Optional) Boolean
+    init_SMA_24 : Float 
+    init_SMA_12 : Float
 
-Output: (Will be displayed using strat_display)
+Output: (Will be displayed using strategy_display)
     store : [Map] (All the positions meta-data after everything is over. Last element has profitability)
 """
 
-'''
-# unit tests will cover: X indicators (in another file), bayesian_belief_updater (in another file), 
-#                        rv_estimator (in another file)
-
-input = stock_initially_holding = False, 
-
-models: defined as belief in wins/losses, constant 50%/50% for this, thus it will always be worth it to try 
-store: defined as r,v for this, constant r,v value for this, thus upper and lower target constant
-
-for each data_point in data_set:
-    X calculate indicators using provided indicator function
-    X compose eval_dto using indicators
-    X evaluate position, passing in dto and store data
-    X store meta_data about position (win/loss, profit, date/time of trade, buy/sell/hold, ...)
-    X update models (update r,v estimates, update win/loss beliefs)
-    (in main, use the model AND evaluation function to output Buy and Hold, Sell and Hold, Sell and Buy, and This Stock 
-        isn't profitable anymore)
-
-return store    
-
-'''
-
-'''
-momentum_strategy_DTO = 
-    {"value_1":{from API}, "value_2":{from API}, "ema24_1":{calculated}, "ema24_2":{calculated}, 
-    "ema12_1":{calculated}, "ema12_2":{calculated}, "stock_holding":{initial from input, after determined by algorithm}, 
-    "buy_point":{initial from input, after determined by algorithm}}
-
-store = 
-    [
-        1: {
-            ticker: Stock name
-            date: ISO Date/time
-            value: Stock Value at this point
-            holding_stock: False if you don't have the stock True otherwise
-            current_profitability_multiplier: 1 starting off, then whatever is computed later
-            position_evaluation: "BUY", "SELL", or "HOLD"
-            position_two_step_evaluation: "BUY and HOLD", "SELL and HOLD", "SELL and BUY", "HOLD"     
-        },
-        ...
-    ]
-
-input Data =
-    [
-        ISO Date/time: {
-            ticker: Stock name
-            date: ISO Date/time
-            value: Stock Value at this point    
-        },
-        ...
-    ]
-
-'''
-import src.strategies.indicators.ema as ema
-import src.strategies.evaluation_functions.momentum_strategy_evaluation as mse
 
 # @todo: unit test this function
+# @todo: add date object parsing
+# @todo: query API for initial SMA values
+# @todo: query API for data_set
+# @todo: create mock_data generator for this function so that it may be easily unit tested
+# noinspection PyUnusedLocal
+def conservative_momentum_backtest(data_set: list, init_SMA_24: float, init_SMA_12: float,
+                                   initially_holding: bool = False) -> list:
+    """
+    :param data_set: list
+    :param init_SMA_24: float
+    :param init_SMA_12: float
+    :param initially_holding: bool
+    :return: list
+    """
 
-def conservative_momementum_backtest(data_set, init_SMA_24, init_SMA_12, initially_holding=False) -> list:
     BUY = "BUY"
     SELL = "SELL"
     HOLD = "HOLD"
@@ -88,20 +48,18 @@ def conservative_momementum_backtest(data_set, init_SMA_24, init_SMA_12, initial
     SH = "SELL and HOLD"
     SB = "SELL and BUY"
     HH = "HOLD and HOLD"
-    position_two_step_evaluation = HH
-    store = []                              # Holds all the Meta-data for each position, stored for display purposes
-    buy_point = data_set[1]["value"]        # The value that you bought a stock at
-    sell_point = data_set[1]["value"]       # The value that you sold a stock at
-    profitability_multiplier = 1            # Updated iteratively starting at 1
-    r = 1.1                                 # Upper Sell Price Target
-    v = .95                                 # Lower Sell Price Target
-    holding = initially_holding             # Changes based off evaluation function
-    EMA_24_1 = init_SMA_24                  # Has to start as init_SMA_24
-    EMA_12_1 = init_SMA_12                  # Has to start as init_SMA_12
-    next_position_evaluation: str = HOLD    # Next Evaluation, used for 2 step evaluation
-    position_evaluation: str = HOLD         # Initial Evaluation defaults to HOLD
+    position_two_step_evaluation: str = HH
+    next_position_evaluation: str = HOLD        # Next Evaluation, used for 2 step evaluation
+    position_evaluation: str = HOLD             # Initial Evaluation defaults to HOLD
+    store: list = []                            # Holds all the Meta-data for each position, stored for display purposes
+    buy_point: float = data_set[1]["value"]     # The value that you bought a stock at
+    sell_point: float = data_set[1]["value"]    # The value that you sold a stock at
+    profitability_multiplier: float = 1.0       # Updated iteratively starting at 1
+    holding: bool = initially_holding           # Changes based off evaluation function
+    EMA_24_1: float = init_SMA_24  # Has to start as init_SMA_24
+    EMA_12_1: float = init_SMA_12  # Has to start as init_SMA_12
 
-    for data_index in range(len(data_set)-3):
+    for data_index in range(len(data_set) - 3):
         # get value_1 and value_2 from data_set
         value_1 = data_set[data_index]["value"]
         value_2 = data_set[data_index + 1]["value"]
@@ -134,18 +92,18 @@ def conservative_momementum_backtest(data_set, init_SMA_24, init_SMA_12, initial
 
         # update related variables for the store
         if position_evaluation == BUY:
-            #next_position_evaluation = BUY
+            # next_position_evaluation = BUY
             buy_point = value_2
             profitability_multiplier *= (sell_point / buy_point)
             holding = True
         elif position_evaluation == SELL:
-            #next_position_evaluation = SELL
+            # next_position_evaluation = SELL
             sell_point = value_2
             profitability_multiplier *= (sell_point / buy_point)
             holding = False
         else:
             pass
-            #next_position_evaluation = HOLD
+            # next_position_evaluation = HOLD
 
         eval_dto_next = {
             "value_1": value_3,
@@ -184,6 +142,7 @@ def conservative_momementum_backtest(data_set, init_SMA_24, init_SMA_12, initial
     return store
 
 
+'''
 mock_data_set = [
     {
         "ticker": "ETH",
@@ -255,34 +214,13 @@ mock_data_set = [
         "date": "Today at noon",
         "value": 1890
     },
-    ]
+]
 sma24 = 1999
 sma12 = 2004
 
-results = conservative_momementum_backtest(data_set=mock_data_set, init_SMA_24=sma24, init_SMA_12=sma12)
+results = conservative_momentum_backtest(data_set=mock_data_set, init_SMA_24=sma24, init_SMA_12=sma12)
 
 for data_point in results:
     print(data_point)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+'''
