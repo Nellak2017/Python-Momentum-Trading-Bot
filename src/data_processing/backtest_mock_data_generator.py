@@ -14,7 +14,7 @@ Input:
     end_date : Date
     low_value : Float (Lowest randomly generated value)
     high_value : Float (Highest randomly generated value)
-    step = 3600 : (Optional) Int (Number of seconds between each Query)
+    step = 1 : (Optional) Int (Number of seconds between each Query)
 
 Output: (Will be displayed using strategy_display)
     data_points : [dict] (All the position data. They have fields "ticker", "date", and "value")
@@ -34,7 +34,7 @@ def make_obj(ticker: str, date: datetime, value: float) -> dict:
 
 
 def mock_data_generator(ticker: str, initial_date: datetime, end_date: datetime, low_value: float,
-                        high_value: float, step: int) -> list:
+                        high_value: float, step: int = 1) -> list:
     """
     :param ticker: The Stock Ticker
     :param initial_date: The Initial Date of mock_data generation
