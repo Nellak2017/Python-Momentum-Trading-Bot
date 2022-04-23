@@ -19,6 +19,8 @@ Input:
     Initially_Holding = False : (Optional) Boolean
     init_SMA_24 : Float 
     init_SMA_12 : Float
+    r : Float (Upper Target Sell)
+    v : Float (Lower Target Sell)
 
 Output: (Will be displayed using strategy_display or in a console simulation)
     store : [Map] (All the positions meta-data after everything is over. Last element has profitability)
@@ -32,13 +34,15 @@ Output: (Will be displayed using strategy_display or in a console simulation)
 # @todo: create mock_data generator for this function so that it may be easily unit tested
 # noinspection PyUnusedLocal
 def conservative_momentum_backtest(data_set: list, init_SMA_24: float, init_SMA_12: float,
-                                   initially_holding: bool = False) -> list:
+                                   initially_holding: bool = False, r: float = 1.1, v: float = .95) -> list:
     """
-    :param data_set: list
-    :param init_SMA_24: float
-    :param init_SMA_12: float
-    :param initially_holding: bool
-    :return: list
+    :param r: Upper Target Sell
+    :param v: Lower Target Sell
+    :param data_set: List of Dicts that is our Stock Data possibly from an API
+    :param init_SMA_24: Simple Moving Average 24
+    :param init_SMA_12: Simple Moving Average 12
+    :param initially_holding: Whether you have the stock or not, initially false
+    :return: list of dicts containing all the stock meta-data
     """
 
     BUY = "BUY"
@@ -83,7 +87,7 @@ def conservative_momentum_backtest(data_set: list, init_SMA_24: float, init_SMA_
         }
 
         # evaluate this position, passing in dto and store data
-        position_evaluation = mse.evaluate_position(data_point=eval_dto)
+        position_evaluation = mse.evaluate_position(data_point=eval_dto, r=r, v=v)
 
         EMA_24_1 = EMA_24_2                     # Updated with New Previous Ema values
         EMA_12_1 = EMA_12_2                     # Updated with New Previous Ema values
@@ -115,7 +119,7 @@ def conservative_momentum_backtest(data_set: list, init_SMA_24: float, init_SMA_
             "stock_holding": holding,
             "buy_point": buy_point
         }
-        next_position_evaluation = mse.evaluate_position(data_point=eval_dto_next)
+        next_position_evaluation = mse.evaluate_position(data_point=eval_dto_next, r=r, v=v)
 
         if position_evaluation == BUY:
             position_two_step_evaluation = BH
