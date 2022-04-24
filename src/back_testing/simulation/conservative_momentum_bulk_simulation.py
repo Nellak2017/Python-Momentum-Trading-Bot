@@ -9,10 +9,12 @@ Date: 22 Apr 2022
 Author: Connor Keenum
 
 Description:
-    This file simply simulates the conservative momentum strategy using various techniques.
+    This file simply simulates the conservative momentum strategy using various techniques, many hundreds of times.
+    The only display for this is the Console. If you want to visualize it, go to the other simulation for this.
 """
 
 
+# @ todo: Make the simulator for Geometric Brownian Motion
 def uniform_dist_test(start, end, ticker, lowest, highest, query, repeat_test):
     init_date = datetime.fromtimestamp(start)
     end_date = datetime.fromtimestamp(end)
@@ -47,5 +49,41 @@ lowest = 2000
 highest = 3500
 query = 1  # query every second
 repeat_test = 100000
-
+init_date = datetime.fromtimestamp(start)
+end_date = datetime.fromtimestamp(end)
+'''
 uniform_dist_test(start, end, ticker, lowest, highest, query, repeat_test)
+
+'''
+mock_data = [
+    {'ticker': 'WORK', 'date': datetime.fromtimestamp(start), 'value': 3},
+    {'ticker': 'WORK', 'date': datetime.fromtimestamp(start+1*86400), 'value': 2},
+    {'ticker': 'WORK', 'date': datetime.fromtimestamp(start+2*86400), 'value': 3.33},
+    {'ticker': 'WORK', 'date': datetime.fromtimestamp(start+3*86400), 'value': 2.75},
+    {'ticker': 'WORK', 'date': datetime.fromtimestamp(start+4*86400), 'value': 2.6},
+    {'ticker': 'WORK', 'date': datetime.fromtimestamp(start+5*86400), 'value': 3.05},
+    {'ticker': 'WORK', 'date': datetime.fromtimestamp(start+6*86400), 'value': 2.9},
+    {'ticker': 'WORK', 'date': datetime.fromtimestamp(start+7*86400), 'value': 3.04},
+    {'ticker': 'WORK', 'date': datetime.fromtimestamp(start+8*86400), 'value': 2.71},
+    {'ticker': 'WORK', 'date': datetime.fromtimestamp(start+9*86400), 'value': 2.45},
+    {'ticker': 'WORK', 'date': datetime.fromtimestamp(start+10*86400), 'value': 2.24},
+    {'ticker': 'WORK', 'date': datetime.fromtimestamp(start+11*86400), 'value': 2.26},
+    {'ticker': 'WORK', 'date': datetime.fromtimestamp(start+12*86400), 'value': 2.55},
+    {'ticker': 'WORK', 'date': datetime.fromtimestamp(start+13*86400), 'value': 2.8},
+    {'ticker': 'WORK', 'date': datetime.fromtimestamp(start+14*86400), 'value': 3.01},
+    {'ticker': 'WORK', 'date': datetime.fromtimestamp(start+15*86400), 'value': 3.05},
+    {'ticker': 'WORK', 'date': datetime.fromtimestamp(start+16*86400), 'value': 3.2},
+    {'ticker': 'WORK', 'date': datetime.fromtimestamp(start+17*86400), 'value': 3.25},
+    {'ticker': 'WORK', 'date': datetime.fromtimestamp(start+18*86400), 'value': 3.48},
+    {'ticker': 'WORK', 'date': datetime.fromtimestamp(start+19*86400), 'value': 3.54},
+    {'ticker': 'WORK', 'date': datetime.fromtimestamp(start+19*86400), 'value': 3.54},
+    {'ticker': 'WORK', 'date': datetime.fromtimestamp(start+19*86400), 'value': 3.64},
+    {'ticker': 'WORK', 'date': datetime.fromtimestamp(start+19*86400), 'value': 3.74},
+    ]
+sma24 = 3
+sma12 = 3
+
+backtest = bt.conservative_momentum_backtest(mock_data, sma24, sma12)
+
+for x in backtest:
+    print(x)
