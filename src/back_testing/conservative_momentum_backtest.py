@@ -32,6 +32,8 @@ Output: (Will be displayed using strategy_display or in a console simulation)
 # @todo: query API for initial SMA values
 # @todo: query API for data_set
 # @todo: create mock_data generator for this function so that it may be easily unit tested
+# @todo: Address the Edge Case where SMA12 and SMA24 initially are equal, it leads to a None Evaluation which is wrong
+# @todo: Address the Error where profitability is updated when bought for certain cases
 # noinspection PyUnusedLocal
 def conservative_momentum_backtest(data_set: list, init_SMA_24: float, init_SMA_12: float,
                                    initially_holding: bool = False, r: float = 1.1, v: float = .95) -> list:
@@ -88,6 +90,8 @@ def conservative_momentum_backtest(data_set: list, init_SMA_24: float, init_SMA_
 
         # evaluate this position, passing in dto and store data
         position_evaluation = mse.evaluate_position(data_point=eval_dto, r=r, v=v)
+        if position_evaluation not in [BUY, SELL, HOLD]:
+            raise ValueError('The Evaluation Function Returned an unexpected value.')
 
         EMA_24_1 = EMA_24_2                     # Updated with New Previous Ema values
         EMA_12_1 = EMA_12_2                     # Updated with New Previous Ema values
@@ -98,7 +102,7 @@ def conservative_momentum_backtest(data_set: list, init_SMA_24: float, init_SMA_
         if position_evaluation == BUY:
             # next_position_evaluation = BUY
             buy_point = value_2
-            profitability_multiplier *= (sell_point / buy_point)
+            #profitability_multiplier *= (sell_point / buy_point)
             holding = True
         elif position_evaluation == SELL:
             # next_position_evaluation = SELL
@@ -107,7 +111,7 @@ def conservative_momentum_backtest(data_set: list, init_SMA_24: float, init_SMA_
             holding = False
         else:
             pass
-            # next_position_evaluation = HOLD
+            #next_position_evaluation = HOLD
 
         eval_dto_next = {
             "value_1": value_3,
@@ -120,6 +124,8 @@ def conservative_momentum_backtest(data_set: list, init_SMA_24: float, init_SMA_
             "buy_point": buy_point
         }
         next_position_evaluation = mse.evaluate_position(data_point=eval_dto_next, r=r, v=v)
+        if next_position_evaluation not in [BUY, SELL, HOLD]:
+            raise ValueError('The "Next" Evaluation Function Returned an unexpected value.')
 
         if position_evaluation == BUY:
             position_two_step_evaluation = BH
