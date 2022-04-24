@@ -18,3 +18,13 @@ display folder -> all the display methods;
 import numpy as np
 import pandas as pd
 import requests
+
+# @ todo: Get API Data for a collection of stocks
+# @ todo: Learn how to deal with Data frame objects from Pandas for the API
+# @ todo: Make Data display that can show where buy/sell happened and plot the ema12 and ema24
+# @ todo: Make visualization for each technique
+# @ todo: Make the bulk simulator for Geometric Brownian Motion
+# @ todo: Make the email function
+# @ todo: Store Trades from main in a CSV so that it may always have it's models up to date, and for logging reasons
+# @ todo: Make the adaptive momentum model using bayesian statistics
+# @ todo: Make the main function
