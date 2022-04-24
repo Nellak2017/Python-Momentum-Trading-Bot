@@ -1,7 +1,6 @@
 from datetime import datetime
 import random
 import numpy as np
-
 """
 Date: 23 Apr 2022
 
