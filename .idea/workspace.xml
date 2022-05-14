@@ -1,0 +1,620 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="932112a9-919d-4d6a-ae6f-b5a23c8170e5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/API/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/API/flask_server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Nellak.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Nellak.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/back_testing/conservative_momentum_backtest.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/back_testing/conservative_momentum_backtest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/back_testing/simulation/conservative_momentum_bulk_simulation.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/back_testing/simulation/conservative_momentum_bulk_simulation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data_processing/backtest_mock_data_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_processing/backtest_mock_data_generator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data_processing/stock_data_API.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_processing/stock_data_API.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/strategies/evaluation_functions/momentum_strategy_evaluation.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/strategies/evaluation_functions/momentum_strategy_evaluation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/strategies/evaluation_functions/test/evaluation_functions_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/strategies/evaluation_functions/test/evaluation_functions_test.py" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-1105196025">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.3" value="2" />
+          <entry key="project.opened" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="LICENSE" value="1" />
+          <entry key="gitignore" value="1" />
+          <entry key="md" value="1" />
+          <entry key="py" value="32" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Markdown" value="1" />
+          <entry key="PLAIN_TEXT" value="2" />
+          <entry key="Python" value="32" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="dummy" value="87" />
+          <entry key="py" value="34731" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="PLAIN_TEXT" value="87" />
+          <entry key="Python" value="34731" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/back_testing/simulation/conservative_momentum_bulk_simulation.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1717">
+              <caret line="105" column="7" selection-start-line="105" selection-start-column="7" selection-end-line="105" selection-end-column="7" />
+              <folding>
+                <element signature="e#0#29#0" expanded="true" />
+                <marker date="1651973006483" expanded="true" signature="4590:4595" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/data_processing/backtest_mock_data_generator.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2091">
+              <caret line="147" column="3" selection-start-line="147" selection-start-column="3" selection-end-line="147" selection-end-column="3" />
+              <folding>
+                <element signature="e#0#29#0" expanded="true" />
+                <marker date="1651962654589" expanded="true" signature="621:1177" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/back_testing/simulation/conservative_momentum_single_simulation.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="25" selection-start-line="25" selection-end-line="25" />
+              <folding>
+                <element signature="e#270#301#0" expanded="true" />
+                <marker date="1650740266931" expanded="true" signature="521:526" ph="..." />
+                <marker date="1650740266931" expanded="true" signature="565:570" ph="..." />
+                <marker date="1650740266931" expanded="true" signature="600:605" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/back_testing/conservative_momentum_backtest.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="134">
+              <caret line="303" selection-start-line="306" selection-end-line="307" selection-end-column="15" />
+              <folding>
+                <element signature="e#0#43#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/strategies/evaluation_functions/momentum_strategy_evaluation.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="58" column="97" selection-start-line="58" selection-start-column="8" selection-end-line="58" selection-end-column="97" />
+              <folding>
+                <marker date="1650838662129" expanded="true" signature="5251:5256" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/data_processing/stock_data_API.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="23" column="48" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
+              <folding>
+                <element signature="e#0#21#0" expanded="true" />
+                <marker date="1652401426266" expanded="true" signature="660:2127" ph="..." />
+                <marker date="1652401426266" expanded="true" signature="2380:2385" ph="..." />
+                <marker date="1652401426266" expanded="true" signature="2380:2658" ph="..." />
+                <marker date="1652401426266" expanded="true" signature="3395:3623" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/API/flask_server.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="329">
+              <caret line="85" lean-forward="true" selection-start-line="85" selection-end-line="85" />
+              <folding>
+                <element signature="e#326#358#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>buy_point</find>
+      <find>sell_value</find>
+      <find>mse</find>
+      <find>ema.</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/cmd/quantitative_momentum_strategy.py" />
+        <option value="$PROJECT_DIR$/src/cmd/main.py" />
+        <option value="$PROJECT_DIR$/src/pkg/quantitative_momentum_strategy.py" />
+        <option value="$PROJECT_DIR$/src/strategies/quantitative_momentum_strategy.py" />
+        <option value="$PROJECT_DIR$/src/strategies/conservative_momentum_strategy.py" />
+        <option value="$PROJECT_DIR$/src/strategies/adaptive_momentum_strategy.py" />
+        <option value="$PROJECT_DIR$/src/strategies/adaptive_momentum_strategy_evaluation.py" />
+        <option value="$PROJECT_DIR$/src/strategies/conservative_momentum_strategy_evaluation.py" />
+        <option value="$PROJECT_DIR$/src/strategies/momentum_strategy_evaluation.py" />
+        <option value="$PROJECT_DIR$/src/strategies/test/conservative_momentum_evaluation_test.py" />
+        <option value="$PROJECT_DIR$/src/strategies/backtest/conservative_momentum_backtest.py" />
+        <option value="$PROJECT_DIR$/src/strategies/back_testing/conservative_momentum_backtest.py" />
+        <option value="$PROJECT_DIR$/src/strategies/indicators/ema.py" />
+        <option value="$PROJECT_DIR$/src/strategies/indicators/sma.py" />
+        <option value="$PROJECT_DIR$/src/strategies/indicators/test/indicators_test.py" />
+        <option value="$PROJECT_DIR$/src/back_testing/simulation/geometric_brownian_motion.py" />
+        <option value="$PROJECT_DIR$/src/data_processing/geometric_brownian_motion.py" />
+        <option value="$PROJECT_DIR$/src/back_testing/simulation/conservative_momentum_simulation.py" />
+        <option value="$PROJECT_DIR$/src/data_processing/real_stock_data.py" />
+        <option value="$PROJECT_DIR$/src/main.py" />
+        <option value="$PROJECT_DIR$/src/back_testing/simulation/conservative_momentum_single_simulation.py" />
+        <option value="$PROJECT_DIR$/src/strategies/evaluation_functions/test/evaluation_functions_test.py" />
+        <option value="$PROJECT_DIR$/src/strategies/evaluation_functions/momentum_strategy_evaluation.py" />
+        <option value="$PROJECT_DIR$/src/data_processing/backtest_mock_data_generator.py" />
+        <option value="$PROJECT_DIR$/src/back_testing/simulation/conservative_momentum_bulk_simulation.py" />
+        <option value="$PROJECT_DIR$/src/back_testing/conservative_momentum_backtest.py" />
+        <option value="$PROJECT_DIR$/src/data_processing/stock_data_API.py" />
+        <option value="$PROJECT_DIR$/src/API/flask_server.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1244" />
+    <option name="height" value="1056" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Python-Momentum-Trading-Bot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Python-Momentum-Trading-Bot" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Python-Momentum-Trading-Bot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Python-Momentum-Trading-Bot" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Python-Momentum-Trading-Bot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Python-Momentum-Trading-Bot" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="API" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Python-Momentum-Trading-Bot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Python-Momentum-Trading-Bot" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="data_processing" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Connor Keenum\PycharmProjects\Python-Momentum-Trading-Bot\src\data_processing" />
+      <recent name="C:\Users\Connor Keenum\PycharmProjects\Python-Momentum-Trading-Bot\src\strategies\indicators" />
+      <recent name="C:\Users\Connor Keenum\PycharmProjects\Python-Momentum-Trading-Bot\src\strategies\evaluation_functions" />
+      <recent name="C:\Users\Connor Keenum\PycharmProjects\Python-Momentum-Trading-Bot\src" />
+      <recent name="C:\Users\Connor Keenum\PycharmProjects\Python-Momentum-Trading-Bot\src\pkg" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.flask_server">
+    <configuration name="conservative_momentum_backtest" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Python-Momentum-Trading-Bot" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/back_testing" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/back_testing/conservative_momentum_backtest.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="conservative_momentum_bulk_simulation" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Python-Momentum-Trading-Bot" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/back_testing/simulation" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/back_testing/simulation/conservative_momentum_bulk_simulation.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="flask_server" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Python-Momentum-Trading-Bot" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/API" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/API/flask_server.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="stock_data_API" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Python-Momentum-Trading-Bot" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/data_processing" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/data_processing/stock_data_API.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for evaluation_functions_test.TestEvaluationFunction.test_eval_function" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="Python-Momentum-Trading-Bot" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/strategies/evaluation_functions/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;evaluation_functions_test.TestEvaluationFunction.test_eval_function&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.stock_data_API" />
+      <item itemvalue="Python.conservative_momentum_bulk_simulation" />
+      <item itemvalue="Python tests.Unittests for evaluation_functions_test.TestEvaluationFunction.test_eval_function" />
+      <item itemvalue="Python.conservative_momentum_backtest" />
+      <item itemvalue="Python.flask_server" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.flask_server" />
+        <item itemvalue="Python.stock_data_API" />
+        <item itemvalue="Python.conservative_momentum_backtest" />
+        <item itemvalue="Python.conservative_momentum_bulk_simulation" />
+        <item itemvalue="Python tests.Unittests for evaluation_functions_test.TestEvaluationFunction.test_eval_function" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="932112a9-919d-4d6a-ae6f-b5a23c8170e5" name="Default Changelist" comment="" />
+      <created>1650401647058</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1650401647058</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="Unittests_for_indicators_test_TestIndicators_test_ema_function - 2022.04.21 at 19h 52m 54s.xml">
+      <configuration name="Unittests for indicators_test.TestIndicators.test_ema_function" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_indicators_test_TestIndicators_test_ema_function - 2022.04.21 at 19h 54m 22s.xml">
+      <configuration name="Unittests for indicators_test.TestIndicators.test_ema_function" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_indicators_test_TestIndicators_test_ema_function - 2022.04.21 at 19h 54m 30s.xml">
+      <configuration name="Unittests for indicators_test.TestIndicators.test_ema_function" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_indicators_test_TestIndicators_test_ema_function - 2022.04.21 at 19h 54m 54s.xml">
+      <configuration name="Unittests for indicators_test.TestIndicators.test_ema_function" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_indicators_test_TestIndicators_test_ema_function - 2022.04.21 at 19h 55m 26s.xml">
+      <configuration name="Unittests for indicators_test.TestIndicators.test_ema_function" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_indicators_test_TestIndicators_test_ema_function - 2022.04.21 at 20h 23m 14s.xml">
+      <configuration name="Unittests for indicators_test.TestIndicators.test_ema_function" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_evaluation_functions_test_TestEvaluationFunction_test_eval_function - 2022.04.24 at 17h 15m 34s.xml">
+      <configuration name="Unittests for evaluation_functions_test.TestEvaluationFunction.test_eval_function" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_evaluation_functions_test_TestEvaluationFunction_test_eval_function - 2022.04.24 at 17h 15m 49s.xml">
+      <configuration name="Unittests for evaluation_functions_test.TestEvaluationFunction.test_eval_function" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_evaluation_functions_test_TestEvaluationFunction_test_eval_function - 2022.04.24 at 17h 16m 55s.xml">
+      <configuration name="Unittests for evaluation_functions_test.TestEvaluationFunction.test_eval_function" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_evaluation_functions_test_TestEvaluationFunction_test_eval_function - 2022.04.24 at 17h 16m 57s.xml">
+      <configuration name="Unittests for evaluation_functions_test.TestEvaluationFunction.test_eval_function" configurationId="tests" />
+    </history-entry>
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="2576" height="1056" extended-state="7" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49865228" visible="true" weight="0.09692671" />
+      <window_info id="Structure" order="1" sideWeight="0.5013477" side_tool="true" weight="0.24980299" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.4804772" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39154014" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.329718" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.36876357" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.329718" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>((test % (repeat_test//10))/repeat_test)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>repeat_test</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LICENSE">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/strategies/adaptive_momentum_strategy_evaluation.py" />
+    <entry file="file://$PROJECT_DIR$/src/strategies/indicators/sma.py" />
+    <entry file="file://$PROJECT_DIR$/src/strategies/indicators/test/indicators_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="67" selection-start-line="9" selection-start-column="67" selection-end-line="9" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/strategies/indicators/ema.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/data_processing/geometric_brownian_motion.py" />
+    <entry file="file://$PROJECT_DIR$/src/strategies/evaluation_functions/test/evaluation_functions_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="73" column="25" lean-forward="true" selection-start-line="73" selection-start-column="25" selection-end-line="73" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/back_testing/simulation/conservative_momentum_bulk_simulation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1717">
+          <caret line="105" column="7" selection-start-line="105" selection-start-column="7" selection-end-line="105" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+            <marker date="1651973006483" expanded="true" signature="4590:4595" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/data_processing/backtest_mock_data_generator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2091">
+          <caret line="147" column="3" selection-start-line="147" selection-start-column="3" selection-end-line="147" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+            <marker date="1651962654589" expanded="true" signature="621:1177" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/strategies/evaluation_functions/momentum_strategy_evaluation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="58" column="97" selection-start-line="58" selection-start-column="8" selection-end-line="58" selection-end-column="97" />
+          <folding>
+            <marker date="1650838662129" expanded="true" signature="5251:5256" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/back_testing/simulation/conservative_momentum_single_simulation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+          <folding>
+            <element signature="e#270#301#0" expanded="true" />
+            <marker date="1650740266931" expanded="true" signature="521:526" ph="..." />
+            <marker date="1650740266931" expanded="true" signature="565:570" ph="..." />
+            <marker date="1650740266931" expanded="true" signature="600:605" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/back_testing/conservative_momentum_backtest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="303" selection-start-line="306" selection-end-line="307" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/data_processing/stock_data_API.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="23" column="48" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+            <marker date="1652401426266" expanded="true" signature="660:2127" ph="..." />
+            <marker date="1652401426266" expanded="true" signature="2380:2385" ph="..." />
+            <marker date="1652401426266" expanded="true" signature="2380:2658" ph="..." />
+            <marker date="1652401426266" expanded="true" signature="3395:3623" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/API/flask_server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="85" lean-forward="true" selection-start-line="85" selection-end-line="85" />
+          <folding>
+            <element signature="e#326#358#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

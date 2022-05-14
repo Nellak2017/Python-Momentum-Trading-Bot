@@ -1,5 +1,6 @@
 import src.strategies.indicators.ema as ema
 import src.strategies.evaluation_functions.momentum_strategy_evaluation as mse
+import src.data_processing.stock_data_API as sd
 
 """
 Date: 19 Apr 2022
@@ -232,5 +233,90 @@ results = conservative_momentum_backtest(data_set=mock_data_set, init_SMA_24=sma
 
 for data_point in results:
     print(data_point)
+
+'''
+API_Data = sd.get_stock_data_in_range(ticker="ETH-USD", interval="1d", period="1y")
+
+''' 
+# ETH --> Default conservative strat 1y is .6795 (r=1.1,v=.95)
+# ETH --> Best with conservative strat 1y is .91467 (r=1.3,v=.7)
+# ETH --> Buy at start of year, sell at end is 3852.00 and 2634.93 == .68
+sma24 = 2685.78
+sma12 = 3029.18
+'''
+
+''' 
+# MSFT --> Default conservative strat 1y is 1.0522 (r=1.10, v=.95)
+# MSFT --> Best with conservative strat 1y is 1.10044 (r=1.18, v=.96)
+# MSFT --> Buy at start of year, sell at end is 247.18 and 274.73 == 1.11
+sma24 = 8594.95
+sma12 = 8837.43
+'''
+
+'''
+# DOGE --> Default conservative strat 1y is .5795 (r=1.10,v=.95)
+# DOGE --> Best with conservative strat 1y is .892 (r=1.13,v=.955)
+# DOGE --> Buy at start of year, sell at end is .6525 and .1275 == .1954
+sma24 = .35
+sma12 = .42
+'''
+
+'''
+# SPXS --> Default conservative strat 1y is .974 (r=1.10,v=.95)
+# SPXS --> Best with conservative strat 1y is 1.10431 (r=1.12,v=.92)
+# SPXS --> Buy at start of year, sell at end is 26.47 and 22.34 == .84
+sma24 = 27.35
+sma12 = 26.73
+'''
+
+'''
+# NIO --> Default conservative strat 1y is .817 (r=1.10,v=.95)
+# NIO --> Best with conservative strat 1y is .8328 (r=1.25,v=.9)
+# NIO --> Buy at start of year, sell at end is 34.33 and 14.92 == .434
+sma24 = 38.28
+sma12 = 39.01
+'''
+
+'''
+# TSLA --> Default conservative strat 1y is .9197 (r=1.1,v=.95)
+# TSLA --> Best conservative strat 1y is 1.13 (r=2,v=.8)
+# TSLA --> Buy at start of year, sell at end is 617.2 and 873.28 == 1.414
+sma24 = 702.16
+sma12 = 687.3
+
+'''
+
+'''
+# NVDA --> Default conservative strat 1y is 1.2795 (r=1.1,v=.95)
+# NVDA --> Best conservative strat 1y is 1.5088 (r=1.4,v=.95)
+# NVDA --> Buy at start of year, sell at end is 142.6575 and 186.75 == 1.309
+sma24 = 150.33
+sma12 = 149.15
+
+'''
+
+''' 2y
+# AMD --> Default conservative strat 2y is 1.3212 (r=1.1,v=.95)
+# AMD --> Best conservative strat 2y is 1.4079 (r=1.4,v=.95)
+# AMD --> Buy at start of period, sell at end is 53.19 and 93.87 == 1.76
+sma24 = 53.11
+sma12 = 53.50
+
+'''
+
+sma24 = 2685.78
+sma12 = 3029.18
+
+results = conservative_momentum_backtest(data_set=API_Data, init_SMA_12=sma12, init_SMA_24=sma24, r=1.30, v=0)
+
+for data_point in results:
+    print(data_point)
+
+''' Strategy Statistics:
+Stocks evaluated: 6
+
+Default Conservative Average --> .80036
+Optimal Conservative Average --> 1.002855
+Buy and hold Average --> .65188
 
 '''

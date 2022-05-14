@@ -116,18 +116,3 @@ def evaluate_position(data_point: dict, r: float = 1.1, v: float = .95) -> str:
 
     else:
         return HOLD
-
-
-'''
-eval_dto = {
-    "value_1": 3,
-    "value_2": 2,
-    "ema24_1": 3,
-    "ema24_2": 3,
-    "ema12_1": 3,
-    "ema12_2": 3,
-    "stock_holding": False,
-    "buy_point": 3
-}
-print(evaluate_position(data_point=eval_dto))
-'''

@@ -67,6 +67,21 @@ class TestEvaluationFunction(unittest.TestCase):
                 "stock_holding": True, "buy_point": 1.09, "Extra": 1.20}
         self.assertRaises(Exception, evaluate_position, data_point=data)
 
+        # Value Test, Silent Edge Case from April, 24, 2022 , "None Return Value Bug"
+        data = {
+            "value_1": 3,
+            "value_2": 2,
+            "ema24_1": 3,
+            "ema24_2": 3,
+            "ema12_1": 3,
+            "ema12_2": 3,
+            "stock_holding": False,
+            "buy_point": 3
+        }
+        result = evaluate_position(data)
+        self.assertNotEqual(None, result)
+        self.assertEqual(HOLD, result)
+
         '''
         Function Return Value Testing
         '''

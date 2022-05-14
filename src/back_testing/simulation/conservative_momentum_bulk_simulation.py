@@ -2,6 +2,7 @@ from datetime import datetime
 import random
 import src.back_testing.conservative_momentum_backtest as bt
 from src.data_processing.backtest_mock_data_generator import mock_data_generator_uniform
+import src.data_processing.stock_data_API as sd
 
 """
 Date: 22 Apr 2022
@@ -16,6 +17,16 @@ Description:
 
 # @ todo: Make the simulator for Geometric Brownian Motion
 def uniform_dist_test(start, end, ticker, lowest, highest, query, repeat_test):
+    """
+    :param start: Unix time
+    :param end: Unix time
+    :param ticker: Simulated Ticker
+    :param lowest: Lowest Value for the stock
+    :param highest: Highest Value for the stock
+    :param query: How often to query
+    :param repeat_test: Repeat the experiment this many times
+    :return: void. Print out the statistics of the test.
+    """
     init_date = datetime.fromtimestamp(start)
     end_date = datetime.fromtimestamp(end)
     init_sma24 = random.uniform(lowest, highest)
@@ -43,7 +54,7 @@ def uniform_dist_test(start, end, ticker, lowest, highest, query, repeat_test):
 
 
 start = 1_572_014_192
-end = start + 10
+end = start + 15
 ticker = "ETH"
 lowest = 2000
 highest = 3500
@@ -51,8 +62,8 @@ query = 1  # query every second
 repeat_test = 100000
 init_date = datetime.fromtimestamp(start)
 end_date = datetime.fromtimestamp(end)
-'''
-uniform_dist_test(start, end, ticker, lowest, highest, query, repeat_test)
+
+#uniform_dist_test(start, end, ticker, lowest, highest, query, repeat_test)
 
 '''
 mock_data = [
@@ -87,3 +98,35 @@ backtest = bt.conservative_momentum_backtest(mock_data, sma24, sma12)
 
 for x in backtest:
     print(x)
+'''
+
+# @ todo: Make this test many stocks at once and print the results of each
+def real_stocks_conservative_momentum_test(stocks: list = ["ETH-USD"], r: float = 1.1, v: float = .95,
+                                           period: str = "1y"):
+    """
+    :param stocks: A list of stocks you want to compare
+    :param r: Upper Sell Target
+    :param v: Lower Sell Target
+    :param period: Time Period in consideration
+    :return: void. Prints a list of dicts to the console
+    """
+    API_Data = sd.get_stock_data_in_range(ticker="NVDA", interval="1d", period="1y")
+
+    sma24 = 150.33
+    sma12 = 149.15
+
+    results = bt.conservative_momentum_backtest(data_set=API_Data, init_SMA_12=sma12, init_SMA_24=sma24, r=1.4, v=.95)
+
+    for data_point in results:
+        print(data_point)
+
+
+real_stocks_conservative_momentum_test()
+
+
+
+
+
+
+
+

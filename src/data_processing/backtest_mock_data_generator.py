@@ -99,3 +99,50 @@ def mock_data_generator_geometric_brownian(ticker: str, initial_date: datetime, 
         index += 1
 
     return data_points
+
+
+
+
+
+
+
+
+
+
+'''
+# Simple test to see if it runs properly
+
+start = 1_572_014_192
+end = start + 365
+sdate = datetime.fromtimestamp(start)
+edate = datetime.fromtimestamp(end)
+ticker = "ETH"
+lowest = 2000
+query = 1  # query every second
+repeat_test = 2000
+begin_test = 500
+init_sma24 = 2000
+init_sma12 = 2030
+
+sum_ = 0
+for seed in range(begin_test, begin_test+repeat_test):
+    data_pts = mock_data_generator_geometric_brownian(ticker=ticker, initial_date=sdate, end_date=edate,
+                                                      start_price=lowest, seed=seed, mu = 0.0015)
+    back_test = bt.conservative_momentum_backtest(data_pts, init_sma24, init_sma12, r=1.10, v=.95)
+    profitability = back_test[-1]["current_profitability_multiplier"]
+    sum_ += profitability
+
+
+price = []
+for data in data_pts:
+    price.append(data["value"])
+
+
+print(f"Average Profitability for {repeat_test-begin_test} trials = {sum_ / repeat_test}")
+print(f"5-year profitability, {sum_ / repeat_test}^5 = {(sum_ / repeat_test)**5}")
+
+
+plt.plot(price)
+plt.show()
+
+'''
